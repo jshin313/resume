@@ -3,6 +3,13 @@
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+% \hypersetup{
+%     colorlinks=true,
+%     linkcolor=blue,
+%     filecolor=magenta,      
+%     urlcolor=cyan,
+% }
 
 \titleformat{\section}
 {\large\bfseries}
@@ -58,13 +65,13 @@
 \end{itemize}
 
 \section{Projects}
-\subsection{TI-Authenticator: 2FA on a Calculator} (C, HMAC, SHA1, OTP)
+\subsection{\href{https://github.com/jshin313/ti-authenticator}{TI-Authenticator: 2FA on a Calculator}} (C, HMAC, SHA1, OTP)
 \begin{itemize}
     \item Provides rolling passcodes similar to Google Authenticator except on a graphing calculator
-    \item Implements One-Time Password (OTP) algorithms for the TI-84+ CE graphing calculator based on RFC 4226 (HOTP) and RFC 6238 (TOTP)
+    \item Implements One-Time Password (OTP) algorithms for the TI-84+ CE graphing calculator based on \href{https://tools.ietf.org/html/rfc4226}{RFC 4226} (HOTP) and \href{https://tools.ietf.org/html/rfc6238}{RFC 6238} (TOTP)
 \end{itemize}
 
-\subsection{Calculator Controlled RC Boat} (C++, TI-BASIC, Arduino)
+\subsection{\href{https://github.com/jshin313/CalcControlledBoat}{Calculator Controlled RC Boat}} (C++, TI-BASIC, Arduino)
 \begin{itemize}
     \item Allows a graphing calculator to wirelessly control a boat
     \item Utilizes an Arduino and RF wireless modules with a C++ library called ArTICL to interface with a TI-84+ graphing calculator
