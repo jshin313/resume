@@ -1,2 +1,2 @@
-# Resume
+# Résumé
 Just my Résumé
