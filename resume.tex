@@ -1,0 +1,94 @@
+\documentclass{article}
+
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[margin=1in]{geometry}
+
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}[runin]
+{\normalsize\bfseries}
+{}
+{0em}
+{}
+
+\titlespacing{\section}
+{0em}{2em}{1em}
+\titlespacing{\subsection}
+{0em}{0em}{1em}
+
+\renewcommand{\maketitle}{
+\begin{center}
+    {\huge\bfseries
+\theauthor}
+\end{center}
+\begin{center}
+    \vspace{1em}
+    \leavevmode
+https://github.com/jshin313 $\bullet$ https://www.jacobshin.com $\bullet$ jacobshin313@gmail.com $\bullet$ (267) 393 0368
+\end{center}
+}
+
+\begin{document}
+
+\title{R\'esum\'e}
+\author{Jacob Shin}
+
+\maketitle
+\section{Education}
+\subsection{Temple University}\hspace{31em} 2020 - 2024
+\begin{itemize}
+    \item Bachelor of Science, Computer Science -- College of Science and Technology -- Honors Program
+    \item President's Scholar: Covers Full-Tuition (\$20,000/yr)
+\end{itemize}
+
+\subsection{Pennsbury High School}(4.65 Weighted GPA)\hspace{19em} 2016 - 2020
+\begin{itemize}
+    \item Academic Excellence in Computer Science -- Xerox Award for Innovation and Information Technology
+\end{itemize}
+
+\section{Experience}
+\subsection{Princeton Plasma Physics Laboratory (PPPL) Intern} (Fall 2019 - Winter 2019)
+\begin{itemize}
+    \item Worked on designing an electronic circuit for measuring properties like density and temperature for electrons
+\end{itemize}
+
+\section{Projects}
+\subsection{TI-Authenticator: 2FA on a Calculator} (C, HMAC, SHA1, OTP)
+\begin{itemize}
+    \item Provides rolling passcodes similar to Google Authenticator except on a graphing calculator
+    \item Implements One-Time Password (OTP) algorithms for the TI-84+ CE graphing calculator based on RFC 4226 (HOTP) and RFC 6238 (TOTP)
+\end{itemize}
+
+\subsection{Calculator Controlled RC Boat} (C++, TI-BASIC, Arduino)
+\begin{itemize}
+    \item Allows a graphing calculator to wirelessly control a boat
+    \item Utilizes an Arduino and RF wireless modules with a C++ library called ArTICL to interface with a TI-84+ graphing calculator
+\end{itemize}
+
+\subsection{College Rejection Simulator} (HTML, CSS, Javascript, Bootstrap, Netlify)
+\begin{itemize}
+    \item Created a college rejection simulator with fake decision letters and college login portals to help high school seniors mentally prepare for their rejection
+    \item Received 20,000 views within the first few days of the release
+    \item Utilized my previous work from https://github.com/jshin313/preparetoberejected
+\end{itemize}
+
+\subsection{Wireless LED Marching Band Lights} (C++, Arduino, Group Project)
+\begin{itemize}
+    \item Created multi-coloured, music-synchronized lights for the drums and other instruments
+    \item Redesigned an existing prototype by using more cost effective circuity in order to make the project feasible and fundable by the school
+\end{itemize}
+
+\section{Skills}
+\subsection{Programming Languages:}
+C, C++, Python, Javascript, x86 ASM
+\subsection{Markup Languages:}
+{\LaTeX}, Markdown, HTML, CSS
+\subsection{Other:}
+Linux, Bash, Git/Github, Tmux, (Neo)vim, Arduino
+
+\end{document}
