@@ -5,12 +5,18 @@
 \usepackage{geometry}
 \geometry{
  a4paper,
- total={170mm,257mm},
+ total={170mm,267mm},
  left=20mm,
- top=20mm,
+ top=8mm,
 }
-
-\pagenumbering{gobble}
+\usepackage{hyperref}
+% \hypersetup{
+%     colorlinks=true,
+%     linkcolor=blue,
+%     filecolor=magenta,      
+%     urlcolor=cyan,
+% }
+\pagenumbering{gobble} % Remove page numbering
 
 \titleformat{\section}
 {\large\bfseries}
@@ -37,10 +43,7 @@
     \begin{center}
         \vspace{1em}
         \leavevmode
-        https://github.com/anonuser $\bullet$ https://www.example.com $\bullet$ anonuser123@gmail.com $\bullet$ (123) 456 7890
-        \vspace{1em}
-        \\
-        123 Street Drive Town, State 12345
+        https://github.com/example $\bullet$ https://www.example.com $\bullet$ exampleuser@gmail.com $\bullet$ (123) 456 7890
     \end{center}
 }
 
@@ -51,32 +54,32 @@
 
 \maketitle
 \section{Education}
-\subsection{NoName University}\hspace{31em} 2020 - 2024
+\subsection{Random University}\hspace{31em} 2020 - 2024
 \begin{itemize}
-    \item Bachelor of Science, Computer Science -- College of Science and Technology -- Honors Program
-    \item President's Scholar: Covers Full-Tuition (\$20,000/yr)
-    \item Current Courses: Introduction to Academic Computer Science, Honors Calculus I, Introduction to Problem Solving and Programming in Python
+    \item Bachelor of Science, Computer Science • College of Science and Technology (CST) • Honors Program
+    \item President's Scholar: Covers Full-Tuition (\$20,000/yr) • CST Science Scholar
+    \item Courses: Introduction to Academic Computer Science, Honors Calculus I, Mathematical Concepts in Computing I Honors 
 \end{itemize}
 
-\subsection{Random High School}(4.65 Weighted GPA)\hspace{21em} 2016 - 2020
+\subsection{Random High School}(4.65 Weighted GPA)\hspace{19em} 2016 - 2020
 \begin{itemize}
     \item Academic Excellence in Computer Science -- Xerox Award for Innovation and Information Technology
 \end{itemize}
 
 \section{Experience}
-\subsection{DOE Lab Intern} (Fall 2019 - Winter 2019)
+\subsection{Department of Energy Laboratory (DOE) Intern} (Fall 2019 - Winter 2019)
 \begin{itemize}
-    \item Worked on designing an electronic circuit for measuring properties like density and temperature for electrons
+    \item Learned to design an electronic circuit for a device called a Langmuir probe, an instrument used to measure properties like density and temperature of plasmas
 \end{itemize}
 
 \section{Projects}
-\subsection{TI-Authenticator: 2FA on a Calculator} (C, HMAC, SHA1, OTP)
+\subsection{\href{}{TI-Authenticator: 2FA With a Calculator}} (C, HMAC, SHA1, OTP)
 \begin{itemize}
     \item Provides rolling passcodes similar to Google Authenticator except on a graphing calculator
-    \item Implements One-Time Password (OTP) algorithms for the TI-84+ CE graphing calculator based on RFC 4226 (HOTP) and RFC 6238 (TOTP)
+    \item Implements One-Time Password (OTP) algorithms for the TI-84+ CE graphing calculator based on \href{https://tools.ietf.org/html/rfc4226}{RFC 4226} (HOTP) and \href{https://tools.ietf.org/html/rfc6238}{RFC 6238} (TOTP)
 \end{itemize}
 
-\subsection{Calculator Controlled RC Boat} (C++, TI-BASIC, Arduino)
+\subsection{\href{}{Calculator Controlled RC Boat}} (C++, TI-BASIC, Arduino)
 \begin{itemize}
     \item Allows a graphing calculator to wirelessly control a boat
     \item Utilizes an Arduino and RF wireless modules with a C++ library called ArTICL to interface with a TI-84+ graphing calculator
@@ -86,7 +89,7 @@
 \begin{itemize}
     \item Created a college rejection simulator with fake decision letters and college login portals to help high school seniors mentally prepare for their rejection
     \item Received 20,000 views within the first few days of the release
-    \item Utilized my previous work from https://github.com/anonuser/projectname
+    \item Utilized my previous work from https://github.com/
 \end{itemize}
 
 \subsection{Wireless LED Marching Band Lights} (C++, Arduino, Group Project)
@@ -102,5 +105,10 @@ C, C++, Python, Javascript, x86 ASM
 {\LaTeX}, Markdown, HTML, CSS
 \subsection{Other:}
 Linux, Bash, Git/Github, Tmux, (Neo)vim, Arduino
+
+\section{Awards/Activities}
+\subsection{1st Place: } CTF Computer Security Competition
+\subsection{4th Place: } CTF 2020 Computer Security Competition
+\subsection{Member: } Random University Association for Computing Machinery (ACM)
 
 \end{document}
