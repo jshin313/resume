@@ -1,0 +1,108 @@
+\documentclass{article}
+
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,267mm},
+ left=20mm,
+ top=15mm,
+}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+\pagenumbering{gobble} % Remove page numbering
+
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}[runin]
+{\normalsize\bfseries}
+{}
+{0em}
+{}
+
+\titlespacing{\section}
+{0em}{2em}{1em}
+\titlespacing{\subsection}
+{0em}{0em}{1em}
+
+\renewcommand{\maketitle}{
+    \begin{center}
+        {\huge\bfseries
+        \theauthor}
+    \end{center}
+    \begin{center}
+        \vspace{1em}
+        \leavevmode
+        https://github.com/example $\bullet$ https://www.example.com $\bullet$ example@gmail.com $\bullet$ (123) 456 7890
+    \end{center}
+}
+
+\begin{document}
+
+\title{R\'esum\'e}
+\author{First Last}
+
+\maketitle
+\section{Education}
+\subsection{NoName University}\hspace{33em}May 2024
+\begin{itemize}
+    \item Bachelor of Science, Computer Science • Honors Program
+    \item President's Scholar: Covers Full-Tuition (\$20,000/yr) • NoName Science Scholar
+    \item Courses: Introduction to Academic Computer Science, Mathematical Concepts in Computing I Honors 
+\end{itemize}
+
+\section{Experience}
+\subsection{Princeton Plasma Physics Laboratory (PPPL) Intern}\hspace{7em}October 2019 - December 2019
+\begin{itemize}
+    \item Learned to design an electronic circuit for a device called a Langmuir probe, an instrument used to measure properties like density and temperature of plasmas
+\end{itemize}
+
+\section{Projects}
+\subsection{\href{https://ivyhub.org/decision-letters/}{College Rejection Simulator}} (HTML, CSS, Javascript, Bootstrap, Netlify)
+\begin{itemize}
+    \item Created a college rejection simulator with fake decision letters and college login portals to help high school seniors mentally prepare for their rejection
+    \item Received 20,000 views within the first few days of the release
+\end{itemize}
+
+\subsection{\href{https://github.com/example/}{COVID Data Web Scraper and Discord Bot}} (Python, Flask, SQLite, Rust, Highcharts.js, Heroku)
+\begin{itemize}
+    \item While the official university website only displayed weekly and daily statistics and then promptly deleted the data for the past days, this project stored the case data for every day and compiled it into graphs and charts to show case progression over time
+    \item Discord Bot written in Rust scraped unofficial website (this project) to provide close to real time COVID data in university Discord servers
+\end{itemize}
+
+\subsection{\href{https://github.com/example}{TI-Authenticator: 2FA With a Calculator}} (C, HMAC, SHA1, OTP)
+\begin{itemize}
+    \item Provided rolling passcodes similar to Google Authenticator except on a graphing calculator
+    \item Implemented One-Time Password (OTP) algorithms for the TI-84+ CE graphing calculator based on \href{https://tools.ietf.org/html/rfc4226}{RFC 4226} (HOTP) and \href{https://tools.ietf.org/html/rfc6238}{RFC 6238} (TOTP)
+\end{itemize}
+
+\subsection{\href{https://github.com/}{Calculator Controlled RC Boat}} (C++, TI-BASIC, Arduino)
+\begin{itemize}
+    \item Allowed a graphing calculator to wirelessly control a boat
+    \item Utilized an Arduino and RF wireless modules with a C++ library called ArTICL to interface with a TI-84+ graphing calculator
+\end{itemize}
+
+\section{Skills}
+\subsection{Programming Languages:}
+C, C++, Python/Flask, Javascript, x86 ASM
+\subsection{Markup Languages:}
+{\LaTeX}, Markdown, HTML, CSS
+\subsection{Other:}
+Linux, Bash, Git/Github, Tmux, (Neo)vim, Arduino, REST APIs, Ghidra, GDB, Binary Exploitation, Basic Reverse Engineering
+
+\section{Awards/Activities}
+\subsection{1st Place: } CTF20 Computer Security Competition
+\subsection{4th Place: } CTF 2020 Computer Security Competition
+\subsection{Member: } NoName Association for Computing Machinery (ACM)
+
+\end{document}
