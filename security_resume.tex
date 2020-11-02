@@ -11,7 +11,7 @@
 }
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks=true,
+    colorlinks=false,
     linkcolor=blue,
     filecolor=magenta,      
     urlcolor=blue,
@@ -43,7 +43,7 @@
     \begin{center}
         \vspace{1em}
         \leavevmode
-        https://github.com/jshin313 $\bullet$ https://www.jacobshin.com $\bullet$ jacobshin313@gmail.com $\bullet$ (267) 393 0368
+        \href{https://linkedin.com/in/jacob-shin}{linkedin.com/in/jacob-shin} $\bullet$ \href{https://github.com/jshin313}{github.com/jshin313} $\bullet$ \href{https://jacobshin.com}{jacobshin.com} $\bullet$ \href{jacobshin313@gmail.com}{jacobshin313@gmail.com} $\bullet$ 267 393 0368
     \end{center}
 }
 
@@ -54,10 +54,9 @@
 
 \maketitle
 \section{Education}
-\subsection{Temple University (College of Science and Technology)}\hspace{4em} Expected to Graduate May 2024
+\subsection{Temple University (BS in Computer Science)}\hspace{4em} Expected to Graduate May 2024
 \begin{itemize}
-    \item Bachelor of Science, Computer Science • Honors Program
-    \item President's Scholar: Covers Full-Tuition (\$20,000/yr) • Temple Science Scholar
+    \item Honors Program • President's Scholar: Covers Full-Tuition (\$20,000/yr) • Temple Science Scholar
     \item Courses: Introduction to Academic Computer Science, Mathematical Concepts in Computing I Honors 
 \end{itemize}
 
@@ -68,20 +67,19 @@
 \end{itemize}
 
 \section{Projects}
-\subsection{\href{https://github.com/jshin313/ti-authenticator}{TI-Authenticator: 2FA With a Calculator}} (C, HMAC, SHA1, OTP)
+\subsection{\href{https://github.com/jshin313/ti-authenticator}{\underline{TI-Authenticator: 2FA With a Calculator}}} (C, HMAC, SHA1, OTP)
 \begin{itemize}
     \item Provides rolling passcodes similar to Google Authenticator except on a graphing calculator
-    \item Implements One-Time Password (OTP) algorithms for the TI-84+ CE graphing calculator based on \href{https://tools.ietf.org/html/rfc4226}{RFC 4226} (HOTP) and \href{https://tools.ietf.org/html/rfc6238}{RFC 6238} (TOTP)
+    \item Implements One-Time Password (OTP) algorithms for the TI-84+ CE graphing calculator based on \href{https://tools.ietf.org/html/rfc4226}{\underline{RFC 4226}} (HOTP) and \href{https://tools.ietf.org/html/rfc6238}{\underline{RFC 6238}} (TOTP)
 \end{itemize}
 
 \subsection{MITRE Embedded Security Challenge 2017} (C, AES, AVR)
 \begin{itemize}
     \item Designed a bootloader for "Secure Firmware Distribution for Automotive Control" using an Atmega1284p microcontroller using HMAC verfication and AES-CBC encryption.
-    \item Attacked other bootloaders from other teams by dumping flash via JTAG (after finding out that fuse bits were incorrectly setup)
-    \item Learned about brownout attacks and side channel attacks
+    \item Attacked other bootloaders from other teams by dumping flash via JTAG (after finding out that fuse bits were incorrectly setup) and learned about brownout attacks and side channel attacks
 \end{itemize}
 
-\subsection{\href{https://jacobshin.com/posts/castorsctf-babybof1pt2/}{Ret2LibC Buffer Overflow CTF Challenge Writeup}}
+\subsection{\href{https://jacobshin.com/posts/castorsctf-babybof1pt2/}{ \underline{Ret2LibC Buffer Overflow CTF Challenge Writeup}}}
 \begin{itemize}
     \item Wrote a writeup of how I solved the BOF (Buffer Overflow) CTF challenge for the RACTF challenge
     \item Described the process of reversing using Ghidra (reverse engineering tool), bypassing exploitation mitigation techniques, and leveraging Return Oriented Programming (ROP) to exploit a binary.
@@ -92,21 +90,26 @@
     \item Learned reverse engineering techniques for reversing malware using Malware Unicorn's free, online reverse engineering workshops (Triage Analysis, Static Analysis, and Dynamic Analysis)
 \end{itemize}
 
+\subsection{\href{https://ivyhub.org/decision-letters/}{\underline{College Rejection Simulator}}} (HTML, CSS, Javascript, Bootstrap, Netlify)
+\begin{itemize}
+    \item Created a college rejection simulator with fake decision letters and college login portals to help high school seniors mentally prepare for their rejection (Received 20,000 views within the first few days of the release)
+\end{itemize}
+
 \section{Skills}
 \subsection{Programming Languages:}
 C, C++, Python, Javascript, x86 ASM
 \subsection{Markup Languages:}
 {\LaTeX}, Markdown, HTML, CSS
 \subsection{Other:}
-Linux, Bash, Git/Github, Tmux, (Neo)vim, REST APIs, Ghidra, GDB, Binary Exploitation, Reverse Engineering, Pwntools
+Linux, Git/Github, Tmux, (Neo)vim, Ghidra, GDB, Binary Exploitation, Reverse Engineering
 
 \section{Awards/Activities}
+\subsection{2nd Place: } RSM OwlHacks 2020 Computer Security Competition
 \subsection{4th Place: } RACTF 2020 Computer Security Competition
 \subsection{1st Place: } castorsCTF20 Computer Security Competition
 \subsection{25th HS Team: } PicoCTF 2019 Computer Security Competition
 \subsection{35th Place: } TJCTF 2019 Computer Security Competition
 \subsection{13th Place: } MITRE 2019 Cyber Challenge CTF
 \subsection{\href{https://ctftime.org/user/66839}{Member: }} Pwn Intended CTF Team (Top 100 Globally)
-\subsection{Member: } Temple Association for Computing Machinery (ACM)
 
 \end{document}
