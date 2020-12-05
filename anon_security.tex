@@ -1,0 +1,110 @@
+\documentclass{article}
+
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{mathptmx}
+\geometry{
+ a4paper,
+ total={170mm,267mm},
+ left=20mm,
+ top=15mm,
+}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+\pagenumbering{gobble} % Remove page numbering
+
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}[runin]
+{\normalsize\bfseries}
+{}
+{0em}
+{}
+
+\titlespacing{\section}
+{0em}{2em}{1em}
+\titlespacing{\subsection}
+{0em}{0em}{1em}
+
+\renewcommand{\maketitle}{
+    \begin{center}
+        {\huge\bfseries
+        \theauthor}
+    \end{center}
+    \begin{center}
+        \vspace{1em}
+        \leavevmode
+        \href{https://youtu.be/DLzxrzFCyOs}{linkedin.com/in/first-last} $\bullet$ \href{https://youtu.be/DLzxrzFCyOs}{github.com/username} $\bullet$ \href{https://firstlast.com}{firstlast.com} $\bullet$ \href{https://youtu.be/DLzxrzFCyOs}{firstlast123@gmail.com} $\bullet$ 123 456 7890
+    \end{center}
+}
+
+\begin{document}
+
+\title{R\'esum\'e}
+\author{First Last}
+
+\maketitle
+\section{Education}
+\subsection{Jawn University} \hfill Expected: May 2024
+\begin{itemize}
+    \item BS in Computer Science • Honors Program • President's Scholar: Full-Tuition
+    \item Courses: Introduction to Academic Computer Science, Math Concepts in Computing I (Discrete Mathematics)
+\end{itemize}
+
+\section{Experience}
+\subsection{Department of Energy (DOE) Intern}\hfill October 2019 - December 2019
+\begin{itemize}
+    \item Designed circuitry for a Langmuir probe, a device used to measure properties of plasmas like density and temperature.
+\end{itemize}
+
+\section{Projects}
+
+\subsection{MITRE Embedded Security Challenge} \hfill (C, AES, AVR)
+\begin{itemize}
+    \item Designed a custom bootloader for an Atmega microcontroller with AES-CBC encryption and HMAC verification
+    \item Attacked bootloaders from other teams by dumping flash via JTAG after finding out that fuse bits were incorrectly setup.
+\end{itemize}
+
+\subsection{\href{https://youtu.be/DLzxrzFCyOs}{\underline{TI-Authenticator: 2-Factor Authentication With a Calculator}}} \hfill (C, HMAC, SHA1, OTP)
+\begin{itemize}
+    \item Provided rolling passcodes similar to Google Authenticator and Duo except on a TI-84+ CE graphing calculator.
+    \item Implemented One-Time Password (OTP) algorithms based on \href{https://tools.ietf.org/html/rfc4226}{\underline{RFC 4226}} (HOTP) and \href{https://tools.ietf.org/html/rfc6238}{\underline{RFC 6238}} (TOTP) specifications based on a custom implementation of the HMAC algorithm (for learning purposes).
+\end{itemize}
+
+\subsection{\href{https://youtu.be/DLzxrzFCyOs}{ \underline{Personal Blog and Capture the Flag (CTF) Security Challenge Writeups}}}
+\begin{itemize}
+    \item Described the process of reversing using Ghidra (reverse engineering tool), bypassing exploitation mitigation techniques like NX (Non-executable stack) \& ASLR (Address space layout randomization), and leveraging Return Oriented Programming (ROP) to exploit a binary.
+    \item Wrote a writeup on utilizing a tape-drive, emoji based assembly language to implement subtraction and xor from scratch with bitwise operators.
+\end{itemize}
+
+\subsection{Revere Engineering Malware}
+\begin{itemize}
+    \item Learned reverse engineering techniques for reversing malware using Malware Unicorn's free, online reverse engineering workshops (Triage Analysis, Static Analysis, and Dynamic Analysis)
+\end{itemize}
+
+\section{Skills}
+\subsection{Programming Languages:}
+C, C++, Python, Javascript, x86 ASM
+\subsection{Other:}
+Linux, Git/Github, Tmux, (Neo)vim, Ghidra, GDB (GNU Debugger), Binary Exploitation, Basic Reverse Engineering
+
+\section{Awards/Activities}
+\subsection{CTF (Capture the Flag Computer Security Competitions):}
+\begin{itemize}
+    \item 1st at beanCTF20 (out of 500) $\bullet$ 2nd at BirdHacks RSM CTF $\bullet$ 4th at RandoCTF 2020 (out of 1017) $\bullet$ 4th at AnotherCTF2020 (out of 1047)
+    \item 25th at PicoCTF 2019 (out of 11722) $\bullet$ 35th at CTF 2019 (out of 483) $\bullet$ 13th at DefenseCTF 2019 (out of 262)
+\end{itemize} 
+\subsection{Member: } Jawn Hack-a-Hardware / Computer Security Club 
+\subsection{\href{https://youtu.be/DLzxrzFCyOs}{Member: }} Pwn Intended CTF Team (Top 100 Globally)
+
+\end{document}
