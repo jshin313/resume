@@ -1,8 +1,8 @@
 \documentclass{article}
-
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage{geometry}
+\usepackage{mathptmx}
 \geometry{
  a4paper,
  total={170mm,267mm},
@@ -54,57 +54,64 @@
 
 \maketitle
 \section{Education}
-\subsection{Temple University}\hspace{33em}May 2024
+\subsection{Temple University} \hfill Expected: May 2024
 \begin{itemize}
-    \item Bachelor of Science, Computer Science • Honors Program
-    \item President's Scholar: Covers Full-Tuition (\$20,000/yr) • Temple Science Scholar
-    \item Courses: Introduction to Academic Computer Science, Mathematical Concepts in Computing I Honors 
+    \item BS in Computer Science • Honors Program • President's Scholar: Full-Tuition
+    \item Courses: Introduction to Academic Computer Science, Math Concepts in Computing I (Discrete Mathematics)
 \end{itemize}
 
 \section{Experience}
-\subsection{Princeton Plasma Physics Laboratory (PPPL) Intern}\hspace{7em}October 2019 - December 2019
+\subsection{Princeton Plasma Physics Laboratory (PPPL) Intern}\hfill October 2019 - December 2019
 \begin{itemize}
-    \item Learned to design an electronic circuit for a device called a Langmuir probe, an instrument used to measure properties like density and temperature of plasmas
+    \item Designed circuitry for a Langmuir probe, a device used to measure properties of plasmas like density and temperature.
 \end{itemize}
 
 \section{Projects}
-\subsection{\href{https://ivyhub.org/decision-letters/}{\underline{College Rejection Simulator}}} (HTML, CSS, Javascript, Bootstrap, Netlify)
+\subsection{\href{https://github.com/jshin313/ti-authenticator}{\underline{TI-Authenticator: 2-Factor Authentication With a Calculator}}} \hfill (C, HMAC, SHA1, OTP)
 \begin{itemize}
-    \item Created a college rejection simulator with fake decision letters and college login portals to help high school seniors mentally prepare for their rejection
-    \item Received 20,000 views within the first few days of the release
+    \item Provided rolling passcodes similar to Google Authenticator and Duo except on a TI-84+ CE graphing calculator.
+    \item Implemented One-Time Password (OTP) algorithms based on \href{https://tools.ietf.org/html/rfc4226}{\underline{RFC 4226}} (HOTP) and \href{https://tools.ietf.org/html/rfc6238}{\underline{RFC 6238}} (TOTP) specifications based on a custom implementation of the HMAC algorithm (for learning purposes).
 \end{itemize}
 
-\subsection{\href{https://github.com/jshin313/unofficial-temple-covid-live-dashboard}{\underline{COVID Data Web Scraper and Discord Bot}}} (Python, Flask, SQLite, Rust, Highcharts.js, Heroku)
+\subsection{\href{https://github.com/jshin313/CalcControlledBoat}{\underline{Calculator Controlled RC Boat}}} \hfill (C++, TI-BASIC, Arduino)
 \begin{itemize}
-    \item While the official university website only displayed weekly and daily statistics and then promptly deleted the data for the past days, this project stored the case data for every day and compiled it into graphs and charts to show case progression over time
-    \item Discord Bot written in Rust scraped unofficial website (this project) to provide close to real time COVID data in university Discord servers
+    \item Utilized an Arduino and RF wireless modules with a C++ library called ArTICL to interface with a TI-84+ graphing calculator to remotely control a boat.
+    \item Tracked down and fixed a bug in the library that prevented the Arduino from properly interfacing with the specific calculator model.
 \end{itemize}
 
-\subsection{\href{https://github.com/jshin313/ti-authenticator}{\underline{TI-Authenticator: 2FA With a Calculator}}} (C, HMAC, SHA1, OTP)
+\subsection{\href{https://github.com/jshin313/AquaQuant}{\underline{Water Utilization Dashboard}}} \hfill (React, Flask, Websockets, Material-UI, ESP8266 WiFi Module)
 \begin{itemize}
-    \item Provided rolling passcodes similar to Google Authenticator except on a graphing calculator
-    \item Implemented One-Time Password (OTP) algorithms for the TI-84+ CE graphing calculator based on \href{https://tools.ietf.org/html/rfc4226}{\underline{RFC 4226}} (HOTP) and \href{https://tools.ietf.org/html/rfc6238}{\underline{RFC 6238}} (TOTP)
+    \item Developed a water usage tracking platform using vibration sensors to determine when water was being used and a wifi module to communicate with a Flask backend server via Websockets. 
 \end{itemize}
 
-\subsection{\href{https://github.com/jshin313/CalcControlledBoat}{\underline{Calculator Controlled RC Boat}}} (C++, TI-BASIC, Arduino)
+\subsection{\href{https://github.com/jshin313/unofficial-temple-covid-live-dashboard}{\underline{COVID Data Web Scraper and Discord Bot}}} \hfill (Python, Flask, SQLite, Rust, Highcharts.js, Heroku)
 \begin{itemize}
-    \item Utilized an Arduino and RF wireless modules with a C++ library called ArTICL to interface with a TI-84+ graphing calculator to remotely control a boat
+    \item Scraped the number of covid cases from the university website and displayed detailed cases vs. time graphs and bar charts with breakdowns of employees and on/off campus students via Flask and Highcharts.
+    \item Wrote a bot in Rust to interface to provide close to real time COVID data to various university Discord servers.
 \end{itemize}
+
+\subsection{\href{https://ivyhub.org/decision-letters/}{\underline{College Rejection Simulator}}} \hfill (HTML, CSS, Javascript, Bootstrap, Netlify)
+\begin{itemize}
+    \item Helped over 30,000 high schoolers in 25 countries prepare for college rejection letters with an interactive simulation.
+\end{itemize}
+
+
+
 
 \section{Skills}
-\subsection{Programming Languages:}
-C, C++, Python/Flask, Javascript, x86 ASM
+\subsection{Programming Languages/Frameworks:}
+C, C++, Python, Flask, Javascript, x86 ASM
 \subsection{Markup Languages:}
 {\LaTeX}, Markdown, HTML, CSS
 \subsection{Other:}
-Linux, Bash, Git/Github, Tmux, (Neo)vim, Arduino, REST APIs, Ghidra, GDB, Binary Exploitation, Basic Reverse Engineering
+Linux, Bash, Git/Github, Tmux, Vim (Neovim), Arduino, REST APIs, GDB, Binary Exploitation, Basic Reverse Engineering
 
 \section{Awards/Activities}
 \subsection{CTF (Capture the Flag Computer Security Competitions):}
 \begin{itemize}
-    \item 1st at castorsCTF20 $\bullet$ 2nd at OwlHacks RSM CTF $\bullet$ 4th at MetaCTF 2020 $\bullet$ 4th at RACTF 2020 
-    \item 25th at PicoCTF 2019 $\bullet$ 35th at TJCTF 2019 $\bullet$ 13th at MITRECTF 2019 
+    \item 1st at castorsCTF20 (out of 500) $\bullet$ 2nd at OwlHacks RSM CTF $\bullet$ 4th at MetaCTF 2020 (out of 1017) $\bullet$ 4th at RACTF 2020 (out of 1047)
+    \item 25th at PicoCTF 2019 (out of 11722) $\bullet$ 35th at TJCTF 2019 (out of 483) $\bullet$ 13th at MITRECTF 2019 (out of 262)
 \end{itemize} 
 \subsection{Member: } Temple Association for Computing Machinery (ACM)
-
+\subsection{Member: } Temple Hack-a-Hardware / Computer Security Club 
 \end{document}

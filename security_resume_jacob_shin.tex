@@ -3,6 +3,7 @@
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage{geometry}
+\usepackage{mathptmx}
 \geometry{
  a4paper,
  total={170mm,267mm},
@@ -54,35 +55,36 @@
 
 \maketitle
 \section{Education}
-\subsection{Temple University (BS in Computer Science)}\hspace{4em} Expected to Graduate May 2024
+\subsection{Temple University} \hfill Expected: May 2024
 \begin{itemize}
-    \item Honors Program • President's Scholar: Covers Full-Tuition (\$20,000/yr) • Temple Science Scholar
-    \item Courses: Introduction to Academic Computer Science, Mathematical Concepts in Computing I Honors 
+    \item BS in Computer Science • Honors Program • President's Scholar: Full-Tuition
+    \item Courses: Introduction to Academic Computer Science, Math Concepts in Computing I (Discrete Mathematics)
 \end{itemize}
 
 \section{Experience}
-\subsection{Princeton Plasma Physics Laboratory (PPPL) Intern} (October 2019 - December 2019)
+\subsection{Princeton Plasma Physics Laboratory (PPPL) Intern}\hfill October 2019 - December 2019
 \begin{itemize}
-    \item Learned to design an electronic circuit for a device called a Langmuir probe, an instrument used to measure properties like density and temperature of plasmas
+    \item Designed circuitry for a Langmuir probe, a device used to measure properties of plasmas like density and temperature.
 \end{itemize}
 
 \section{Projects}
-\subsection{\href{https://github.com/jshin313/ti-authenticator}{\underline{TI-Authenticator: 2FA With a Calculator}}} (C, HMAC, SHA1, OTP)
+
+\subsection{MITRE Embedded Security Challenge} \hfill (C, AES, AVR)
 \begin{itemize}
-    \item Provides rolling passcodes similar to Google Authenticator except on a graphing calculator
-    \item Implements One-Time Password (OTP) algorithms for the TI-84+ CE graphing calculator based on \href{https://tools.ietf.org/html/rfc4226}{\underline{RFC 4226}} (HOTP) and \href{https://tools.ietf.org/html/rfc6238}{\underline{RFC 6238}} (TOTP)
+    \item Designed a custom bootloader for an Atmega microcontroller with AES-CBC encryption and HMAC verification
+    \item Attacked bootloaders from other teams by dumping flash via JTAG after finding out that fuse bits were incorrectly setup.
 \end{itemize}
 
-\subsection{MITRE Embedded Security Challenge 2017} (C, AES, AVR)
+\subsection{\href{https://github.com/jshin313/ti-authenticator}{\underline{TI-Authenticator: 2-Factor Authentication With a Calculator}}} \hfill (C, HMAC, SHA1, OTP)
 \begin{itemize}
-    \item Designed a bootloader for "Secure Firmware Distribution for Automotive Control" using an Atmega1284p microcontroller using HMAC verfication and AES-CBC encryption.
-    \item Attacked other bootloaders from other teams by dumping flash via JTAG (after finding out that fuse bits were incorrectly setup) and learned about brownout attacks and side channel attacks
+    \item Provided rolling passcodes similar to Google Authenticator and Duo except on a TI-84+ CE graphing calculator.
+    \item Implemented One-Time Password (OTP) algorithms based on \href{https://tools.ietf.org/html/rfc4226}{\underline{RFC 4226}} (HOTP) and \href{https://tools.ietf.org/html/rfc6238}{\underline{RFC 6238}} (TOTP) specifications based on a custom implementation of the HMAC algorithm (for learning purposes).
 \end{itemize}
 
-\subsection{\href{https://jacobshin.com/posts/castorsctf-babybof1pt2/}{ \underline{Ret2LibC Buffer Overflow CTF Challenge Writeup}}}
+\subsection{\href{https://jacobshin.com/posts/}{ \underline{Personal Blog and Capture the Flag (CTF) Security Challenge Writeups}}}
 \begin{itemize}
-    \item Wrote a writeup of how I solved the BOF (Buffer Overflow) CTF challenge for the RACTF challenge
-    \item Described the process of reversing using Ghidra (reverse engineering tool), bypassing exploitation mitigation techniques, and leveraging Return Oriented Programming (ROP) to exploit a binary.
+    \item Described the process of reversing using Ghidra (reverse engineering tool), bypassing exploitation mitigation techniques like NX (Non-executable stack) \& ASLR (Address space layout randomization), and leveraging Return Oriented Programming (ROP) to exploit a binary.
+    \item Wrote a writeup on utilizing a tape-drive, emoji based assembly language to implement subtraction and xor from scratch with bitwise operators.
 \end{itemize}
 
 \subsection{Revere Engineering Malware}
@@ -90,25 +92,19 @@
     \item Learned reverse engineering techniques for reversing malware using Malware Unicorn's free, online reverse engineering workshops (Triage Analysis, Static Analysis, and Dynamic Analysis)
 \end{itemize}
 
-\subsection{\href{https://ivyhub.org/decision-letters/}{\underline{College Rejection Simulator}}} (HTML, CSS, Javascript, Bootstrap, Netlify)
-\begin{itemize}
-    \item Created a college rejection simulator with fake decision letters and college login portals to help high school seniors mentally prepare for their rejection (Received 20,000 views within the first few days of the release)
-\end{itemize}
-
 \section{Skills}
 \subsection{Programming Languages:}
 C, C++, Python, Javascript, x86 ASM
-\subsection{Markup/Styling Languages:}
-{\LaTeX}, Markdown, HTML, CSS
 \subsection{Other:}
-Linux, Git/Github, Tmux, (Neo)vim, Ghidra, GDB, Binary Exploitation, Reverse Engineering
+Linux, Git/Github, Tmux, (Neo)vim, Ghidra, GDB (GNU Debugger), Binary Exploitation, Basic Reverse Engineering
 
 \section{Awards/Activities}
 \subsection{CTF (Capture the Flag Computer Security Competitions):}
 \begin{itemize}
-    \item 1st at castorsCTF20 $\bullet$ 2nd at OwlHacks RSM CTF $\bullet$ 4th at MetaCTF 2020 $\bullet$ 4th at RACTF 2020 
-    \item 25th at PicoCTF 2019 $\bullet$ 35th at TJCTF 2019 $\bullet$ 13th at MITRECTF 2019 
+    \item 1st at castorsCTF20 (out of 500) $\bullet$ 2nd at OwlHacks RSM CTF $\bullet$ 4th at MetaCTF 2020 (out of 1017) $\bullet$ 4th at RACTF 2020 (out of 1047)
+    \item 25th at PicoCTF 2019 (out of 11722) $\bullet$ 35th at TJCTF 2019 (out of 483) $\bullet$ 13th at MITRECTF 2019 (out of 262)
 \end{itemize} 
- \subsection{\href{https://ctftime.org/user/66839}{Member: }} Pwn Intended CTF Team (Top 100 Globally)
+\subsection{Member: } Temple Hack-a-Hardware / Computer Security Club 
+\subsection{\href{https://ctftime.org/user/66839}{Member: }} Pwn Intended CTF Team (Top 100 Globally)
 
 \end{document}
