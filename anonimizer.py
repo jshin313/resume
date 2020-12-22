@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import os
 import re
 
 def anonymzie(inputfile, outputfile):
@@ -29,8 +30,15 @@ def anonymzie(inputfile, outputfile):
 
     print(reg_resume_txt)
 
+    # Write anonymized output to file
     with open(outputfile, "w") as anon_resume:
         anon_resume.write(reg_resume_txt)
+
+    # Convert tex file to pdf
+    os.system("pdflatex " + outputfile + " && rm -f *.aux *.log *.synctex.gz *.out")
+
+    # Convert pdf to png
+    os.system("convert -flatten -density 300 " + outputfile.split(".")[0] + ".pdf " +  outputfile.split(".")[0]  +".png")
 
 anonymzie("./jacob_shin.tex", "anon.tex")
 anonymzie("./security_resume_jacob_shin.tex", "anon_security_resume.tex")
