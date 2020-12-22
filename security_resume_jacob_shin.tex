@@ -48,6 +48,15 @@
     \end{center}
 }
 
+\newcommand{\headerline}[3]{%
+    \noindent
+    \makebox[0pt][l]{#1}%
+    \makebox[\textwidth][c]{#2}%
+\makebox[0pt][r]{#3}}
+
+\titlespacing{\headerline}
+{0em}{0em}{1em}
+
 \begin{document}
 
 \title{R\'esum\'e}
@@ -55,16 +64,21 @@
 
 \maketitle
 \section{Education}
-\subsection{Temple University} \hfill Expected: May 2024
+\headerline{\textbf{Temple University}}{Philadelphia, PA}{Aug 2020 - May 2024}
 \begin{itemize}
-    \item BS in Computer Science • Honors Program • President's Scholar: Full-Tuition
-    \item Courses: Introduction to Academic Computer Science, Math Concepts in Computing I (Discrete Mathematics)
+    \item Bachelor of Science in Computer Science • GPA: 3.93
 \end{itemize}
 
+\section{Skills}
+\subsection{Programming Languages:}
+C, C++, Python, Javascript, x86 ASM
+\subsection{Other:}
+Linux, Git/Github, Tmux, (Neo)vim, Ghidra, GDB (GNU Debugger), Binary Exploitation, Basic Reverse Engineering, Wireshark, Pwntools, Nmap
+
 \section{Experience}
-\subsection{Princeton Plasma Physics Laboratory (PPPL) Intern}\hfill October 2019 - December 2019
+\headerline{\textbf{Princeton Plasma Physics Lab Intern}}{Princeton, NJ}{Oct 2019 - Dec 2019}
 \begin{itemize}
-    \item Designed circuitry for a Langmuir probe, a device used to measure properties of plasmas like density and temperature.
+    \item Designed circuitry for a Langmuir probe, a device used to measure plasma properties like density and temperature
 \end{itemize}
 
 \section{Projects}
@@ -77,8 +91,8 @@
 
 \subsection{\href{https://github.com/jshin313/ti-authenticator}{\underline{TI-Authenticator: 2-Factor Authentication With a Calculator}}} \hfill (C, HMAC, SHA1, OTP)
 \begin{itemize}
-    \item Provided rolling passcodes similar to Google Authenticator and Duo except on a TI-84+ CE graphing calculator.
-    \item Implemented One-Time Password (OTP) algorithms based on \href{https://tools.ietf.org/html/rfc4226}{\underline{RFC 4226}} (HOTP) and \href{https://tools.ietf.org/html/rfc6238}{\underline{RFC 6238}} (TOTP) specifications based on a custom implementation of the HMAC algorithm (for learning purposes).
+    \item Produced the first calculator app to provide rolling passcodes similar to Google Authenticator and Duo on a TI-84+ CE graphing calculator to enhanced login security via 2-Factor Authentication
+    \item Implemented the two types of One-Time Password (OTP) algorithms from scratch based on the \href{https://tools.ietf.org/html/rfc4226}{\underline{RFC 4226}} and \href{https://tools.ietf.org/html/rfc6238}{\underline{RFC 6238}} specifications based on a custom implementation of the HMAC algorithm (for learning purposes)
 \end{itemize}
 
 \subsection{\href{https://jacobshin.com/posts/}{ \underline{Personal Blog and Capture the Flag (CTF) Security Challenge Writeups}}}
@@ -87,16 +101,10 @@
     \item Wrote a writeup on utilizing a tape-drive, emoji based assembly language to implement subtraction and xor from scratch with bitwise operators.
 \end{itemize}
 
-\subsection{Revere Engineering Malware}
+\subsection{Revere Engineering Malware Lab}
 \begin{itemize}
     \item Learned reverse engineering techniques for reversing malware using Malware Unicorn's free, online reverse engineering workshops (Triage Analysis, Static Analysis, and Dynamic Analysis)
 \end{itemize}
-
-\section{Skills}
-\subsection{Programming Languages:}
-C, C++, Python, Javascript, x86 ASM
-\subsection{Other:}
-Linux, Git/Github, Tmux, (Neo)vim, Ghidra, GDB (GNU Debugger), Binary Exploitation, Basic Reverse Engineering
 
 \section{Awards/Activities}
 \subsection{CTF (Capture the Flag Computer Security Competitions):}
@@ -104,7 +112,7 @@ Linux, Git/Github, Tmux, (Neo)vim, Ghidra, GDB (GNU Debugger), Binary Exploitati
     \item 1st at castorsCTF20 (out of 500) $\bullet$ 2nd at OwlHacks RSM CTF $\bullet$ 4th at MetaCTF 2020 (out of 1017) $\bullet$ 4th at RACTF 2020 (out of 1047)
     \item 25th at PicoCTF 2019 (out of 11722) $\bullet$ 35th at TJCTF 2019 (out of 483) $\bullet$ 13th at MITRECTF 2019 (out of 262)
 \end{itemize} 
-\subsection{Member: } Temple Hack-a-Hardware / Computer Security Club 
-\subsection{\href{https://ctftime.org/user/66839}{Member: }} Pwn Intended CTF Team (Top 100 Globally)
+\subsection{\href{https://ctftime.org/user/66839}{Member: }} Pwn Intended CTF Team (Top 100 Globally) \hfill May 2019 - Present
+\subsection{Member: } Temple Hack-a-Hardware / Computer Security Club  \hfill Oct 2020 - Present
 
 \end{document}
