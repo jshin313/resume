@@ -1,4 +1,5 @@
 \documentclass{article}
+
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage{geometry}
@@ -31,7 +32,7 @@
 {}
 
 \titlespacing{\section}
-{0em}{1em}{1em}
+{0em}{2em}{1em}
 \titlespacing{\subsection}
 {0em}{0em}{1em}
 
@@ -47,8 +48,6 @@
     \end{center}
 }
 
-\begin{document}
-
 \newcommand{\headerline}[3]{%
     \noindent
     \makebox[0pt][l]{#1}%
@@ -57,6 +56,8 @@
 
 \titlespacing{\headerline}
 {0em}{0em}{1em}
+
+\begin{document}
 
 \title{R\'esum\'e}
 \author{First Last}
@@ -69,12 +70,10 @@
 \end{itemize}
 
 \section{Skills}
-\subsection{Programming Languages/Frameworks:}
-C, C++, Python, Flask, Javascript, x86 ASM, Java, Selenium
-\subsection{Markup Languages:}
-{\LaTeX}, Markdown, HTML, CSS
+\subsection{Programming Languages:}
+C, C++, Python, Javascript, x86 ASM
 \subsection{Other:}
-Linux, Bash, Git/Github, Tmux, Vim (Neovim), Arduino, REST APIs, GDB (GNU Debugger), Binary Exploitation, Basic Reverse Engineering
+Linux, Git/Github, Tmux, (Neo)vim, Ghidra, GDB (GNU Debugger), Binary Exploitation, Basic Reverse Engineering, Wireshark, Pwntools, Nmap
 
 \section{Experience}
 \headerline{\textbf{Princeton Plasma Physics Lab Intern}}{Princeton, NJ}{Oct 2019 - Dec 2019}
@@ -84,33 +83,27 @@ Linux, Bash, Git/Github, Tmux, Vim (Neovim), Arduino, REST APIs, GDB (GNU Debugg
 
 \section{Projects}
 
-\textbf{\href{https://youtu.be/dQw4w9WgXcQ}{\underline{Calculator Controlled RC Boat}}} \hfill (C++, TI-BASIC, Arduino)
+\subsection{MITRE Embedded Security Challenge} \hfill (C, AES, AVR)
 \begin{itemize}
-    \item Utilized an Arduino and RF wireless modules to create the first ever calculator controlled, remotely controlled boat by interfacing a TI-84+ graphing calculator with a C++ library called ArTICL
-    \item Enabled the library to support the TI-84+ calculator model by tracking down and fixing a bug in the implementation of the TI-Link protocol
+    \item Designed a custom bootloader for an Atmega microcontroller with AES-CBC encryption and HMAC verification
+    \item Attacked bootloaders from other teams by dumping flash via JTAG after finding out that fuse bits were incorrectly setup.
 \end{itemize}
 
-\textbf{\href{https://youtu.be/dQw4w9WgXcQ}{\underline{Water Utilization Dashboard}}} \hfill (React, C++, Flask, SQLite, Websockets, Material-UI, ESP8266 WiFi Module)
-\begin{itemize}
-    \item Developed a water usage tracking platform using vibration sensors to determine when water was being used and a wifi module to communicate with a Flask backend server via Websockets and a custom built REST API.
-    \item Awarded the best project "using IoT devices and technologies" prize by American Water at the Philly Codefest Hackathon out of 248 participants
-\end{itemize}
-
-\textbf{\href{https://youtu.be/dQw4w9WgXcQ}{\underline{TI-Authenticator: 2-Factor Authentication With a Calculator}}} \hfill (C, HMAC, SHA1, OTP)
+\subsection{\href{https://youtu.be/dQw4w9WgXcQ}{\underline{TI-Authenticator: 2-Factor Authentication With a Calculator}}} \hfill (C, HMAC, SHA1, OTP)
 \begin{itemize}
     \item Produced the first calculator app to provide rolling passcodes similar to Google Authenticator and Duo on a TI-84+ CE graphing calculator to enhanced login security via 2-Factor Authentication
     \item Implemented the two types of One-Time Password (OTP) algorithms from scratch based on the \href{https://youtu.be/dQw4w9WgXcQ}{\underline{RFC 4226}} and \href{https://youtu.be/dQw4w9WgXcQ}{\underline{RFC 6238}} specifications based on a custom implementation of the HMAC algorithm (for learning purposes)
 \end{itemize}
 
-\textbf{\href{https://youtu.be/dQw4w9WgXcQ}{\underline{Web Scraper and Discord Bot}}} \hfill (Python, Flask, SQLite, Postgresql, Rust, Highcharts.js, Heroku)
+\subsection{\href{https://youtu.be/dQw4w9WgXcQ}{ \underline{Personal Blog and Capture the Flag (CTF) Security Challenge Writeups}}}
 \begin{itemize}
-    \item Scraped the number of covid cases from the university website and displayed detailed cases vs. time graphs and bar charts with breakdowns of employees and on/off campus students via Flask and Highcharts
-    \item Wrote a bot in Rust to interface to provide close to real time COVID data to various university Discord servers
+    \item Described the process of reversing using Ghidra (reverse engineering tool), bypassing exploitation mitigation techniques like NX (Non-executable stack) \& ASLR (Address space layout randomization), and leveraging Return Oriented Programming (ROP) to exploit a binary.
+    \item Wrote a writeup on utilizing a tape-drive, emoji based assembly language to implement subtraction and xor from scratch with bitwise operators.
 \end{itemize}
 
-\textbf{\href{https://youtu.be/dQw4w9WgXcQ}{\underline{College Rejection Simulator}}} \hfill (HTML, CSS, Javascript, Bootstrap, Netlify)
+\subsection{Revere Engineering Malware Lab}
 \begin{itemize}
-    \item Helped over 30,000 high schoolers in 25 countries prepare for college rejection letters with an interactive simulation
+    \item Learned reverse engineering techniques for reversing malware using Malware Unicorn's free, online reverse engineering workshops (Triage Analysis, Static Analysis, and Dynamic Analysis)
 \end{itemize}
 
 \section{Awards/Activities}
@@ -119,6 +112,7 @@ Linux, Bash, Git/Github, Tmux, Vim (Neovim), Arduino, REST APIs, GDB (GNU Debugg
     \item 1st at castorsCTF20 (out of 500) $\bullet$ 2nd at OwlHacks RSM CTF $\bullet$ 4th at MetaCTF 2020 (out of 1017) $\bullet$ 4th at RACTF 2020 (out of 1047)
     \item 25th at PicoCTF 2019 (out of 11722) $\bullet$ 35th at TJCTF 2019 (out of 483) $\bullet$ 13th at MITRECTF 2019 (out of 262)
 \end{itemize} 
-\subsection{Member: } Jawn Association for Computing Machinery (ACM) \hfill Aug 2020 - Present
+\subsection{\href{https://youtu.be/dQw4w9WgXcQ}{Member: }} Random CTF Team (Top 100 Globally) \hfill May 2019 - Present
 \subsection{Member: } Jawn Hack-a-Hardware / Computer Security Club  \hfill Oct 2020 - Present
+
 \end{document}
