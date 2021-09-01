@@ -14,7 +14,7 @@ def anonymzie(inputfile, outputfile):
     reg_resume_txt = regex.sub("Last", reg_resume_txt)
 
     regex = re.compile("Temple", re.IGNORECASE)
-    reg_resume_txt = regex.sub("Jawn", reg_resume_txt)
+    reg_resume_txt = regex.sub("Some", reg_resume_txt)
 
     regex = re.compile("313", re.IGNORECASE)
     reg_resume_txt = regex.sub("", reg_resume_txt)
@@ -27,6 +27,21 @@ def anonymzie(inputfile, outputfile):
 
     regex = re.compile("Pwn Intended", re.IGNORECASE)
     reg_resume_txt = regex.sub("Random", reg_resume_txt)
+
+    regex = re.compile("Security Innovation", re.IGNORECASE)
+    reg_resume_txt = regex.sub("Small Security Company", reg_resume_txt)
+
+    regex = re.compile("Princeton Plasma Physics", re.IGNORECASE)
+    reg_resume_txt = regex.sub("DOE", reg_resume_txt)
+
+    regex = re.compile("Princeton", re.IGNORECASE)
+    reg_resume_txt = regex.sub("Location", reg_resume_txt)
+
+    regex = re.compile("Philly", re.IGNORECASE)
+    reg_resume_txt = regex.sub("Location", reg_resume_txt)
+
+    regex = re.compile("American Water", re.IGNORECASE)
+    reg_resume_txt = regex.sub("Company", reg_resume_txt)
 
     print(reg_resume_txt)
 
