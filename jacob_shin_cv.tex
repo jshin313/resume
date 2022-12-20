@@ -1,0 +1,200 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{mathptmx}
+\geometry{
+ left=20mm,
+ right=20mm,
+ top=12mm,
+ bottom=12mm,
+}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+}
+\pagenumbering{gobble} % Remove page numbering
+
+
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\usepackage{multicol}
+\usepackage{etoolbox,refcount}
+
+\newcounter{countitems}
+\newcounter{nextitemizecount}
+\newcommand{\setupcountitems}{%
+  \stepcounter{nextitemizecount}%
+  \setcounter{countitems}{0}%
+  \preto\item{\stepcounter{countitems}}%
+}
+\makeatletter
+\newcommand{\computecountitems}{%
+  \edef\@currentlabel{\number\c@countitems}%
+  \label{countitems@\number\numexpr\value{nextitemizecount}-1\relax}%
+}
+\newcommand{\nextitemizecount}{%
+  \getrefnumber{countitems@\number\c@nextitemizecount}%
+}
+\newcommand{\previtemizecount}{%
+  \getrefnumber{countitems@\number\numexpr\value{nextitemizecount}-1\relax}%
+}
+\makeatother    
+\newenvironment{AutoMultiColItemize}{%
+\ifnumcomp{\nextitemizecount}{>}{3}{\begin{multicols}{2}}{}%
+\setupcountitems\begin{itemize}}%
+{\end{itemize}%
+\unskip\computecountitems\ifnumcomp{\previtemizecount}{>}{3}{\end{multicols}}{}}
+
+\titleformat{\subsection}[runin]
+{\normalsize\bfseries}
+{}
+{0em}
+{}
+
+\titlespacing{\section}
+{0em}{1em}{1em}
+\titlespacing{\subsection}
+{0em}{0em}{1em}
+
+\renewcommand{\maketitle}{
+    \begin{center}
+        {\huge\bfseries
+        \theauthor}
+    \end{center}
+    \begin{center}
+        \vspace{0em}
+        \leavevmode
+        \href{https://linkedin.com/in/jacob-shin}{https://linkedin.com/in/jacob-shin} $\bullet$ 
+          \href{https://jacobshin.com}{jacobshin.com} $\bullet$ \href{mailto:jacobshin313@gmail.com}{jacobshin313@gmail.com} $\bullet$ +1 267 393 0368
+    \end{center}
+}
+
+\begin{document}
+
+\newcommand{\headerline}[3]{%
+    \noindent
+    \makebox[0pt][l]{#1}%
+    \makebox[\textwidth][c]{#2}%
+\makebox[0pt][r]{#3}}
+
+\titlespacing{\headerline}
+{0em}{0em}{1em}
+
+\title{Jacob Shin CV}
+\author{Jacob Shin}
+
+\maketitle
+\section{Education}
+\headerline{\textbf{Temple University}}
+{\textbf{Philadelphia, PA, United States}}{Aug 2020 - May 2024}
+Bachelor of Science in Physics and Computer Science \\
+Cumulative GPA: 3.93 out of 4.00
+
+
+\section{Research Experience}
+\headerline{\textbf{Undergraduate Research Assistant}}{\textbf{Temple University}}{August 2022 - Present}\\
+\headerline{Department of Physics}{}{}
+\headerline{Water Science Research Group}{}{}
+\headerline{Advisor: Dr. Xifan Wu}{}
+
+\begin{itemize}
+    \item Currently analyzing density functional theory (DFT) simulation data to determine the role Van Der Waals forces play in water's unusal properties (e.g. negative thermal expansivity and density maximum at 4 $^\circ$C)
+    \item Processed 5 Terabytes of raw simulation data on a high performance computing cluster by vectorizing computations and using parallel processes
+\end{itemize}
+\headerline{\textbf{Undergraduate Research Assistant}}{\textbf{Temple University}}{December 2021 - May 2022}
+\headerline{Department of Physics}{}\\
+\begin{itemize}
+    \item Simulated the interactions of particles (e.g. electrons and protons) with detectors of different geometries and analyzed the resulting interactions using C++
+
+\end{itemize}
+\headerline{\textbf{Undergraduate Research Assistant}}{\textbf{Temple University}}{January 2021 - May 2021}
+\headerline{Department of Computer Science}{}\\
+\begin{itemize}
+    \item Implemented a web program to interface with the IoT (Internet of Things) devices to detect anomalies that could indicate security concerns in a smart home
+    \item Navigated a codebase with over 40k lines of code and added 10k lines of code
+\end{itemize}
+
+\section{Work Experience}
+\headerline{\textbf{Amazon}}{Seattle, WA}{May 2022 - Aug 2022}
+\headerline{Software Development Engineer Intern}{}{}
+\begin{itemize}
+    \item Created a Machine Learning (ML) Platform to automate the process of securely transferring ML data.
+    % \item Automated the retrieval and encryption of customer data, saving approximately 8 hours of engineering time per request
+    \item Created a query API to filter through 10 terabytes of data using Typescript and Java
+\end{itemize}
+
+\headerline{\textbf{Security Innovation, Inc.}}{Seattle, WA}{June 2021 - Aug 2021}
+\headerline{Security Engineer Intern}{}{}
+\begin{itemize}
+    \item Wrote and reviewed 20 reports detailing the scope and severity of the vulnerabilities in code and recommended remediation steps 
+    \item Conducted independent research exploring the security of platforms using the ez80 CPU and presented it to the company
+\end{itemize}
+
+
+\headerline{\textbf{Princeton Plasma Physics Lab}}{Princeton, NJ}{Oct 2019 - Dec 2019}
+\headerline{Intern}{}{}
+\begin{itemize}
+    \item Created schematics for a Langmuir probe, which is used to measure plasma properties such as temperature and density based on the I-V (Current-Voltage) curve.
+ \item Performed component selection for the Langmuir probe based on the specifications of the plasma parameters and the signal filtering requirements.
+\end{itemize}
+\pagebreak
+
+\section{Skills}
+\subsection{Programming Languages/Frameworks:}
+Python, Jupyter Notebooks, Mathematica, Matlab, C, C++, Javascript
+\subsection{Markup Languages:}
+{\LaTeX}, Markdown, HTML, CSS
+\subsection{Other:}
+Linux, Bash, Git/Github, Vim, SSH/SCP
+\subsection{Laboratory Skills:} Multisim, Soldering, Basic Machine Shop Training
+\subsection{Human Languages:}
+English
+
+\section{Activities}
+\begin{itemize}
+    \item \textbf{Temple Robotics} - Contributed to the code base for the robot to be used in the NASA Robotics Mining/Lunabotics Competition and operated the mill in the machine shop to create components
+    \item \textbf{Temple Data Science Club} - Created challenge problems for students to learn programming and computer security
+    \item \textbf{Temple Physics Club} - Member
+    \item \textbf{Schuylkill Center Wildlife Clinic} - Volunteer (2021-2022)
+\end{itemize}
+
+
+\section{Awards and Honors}
+\begin{itemize}
+    \item \textbf{Temple Presidential Scholarship} - Full Tuition Merit Scholarship for 4 years
+    \item \textbf{Science Scholars Program} - Selective research program that offers a \$4,000 stipend per summer for research
+    \item \textbf{Temple Dean's List} - Granted to the top 16\% of students: Fall 2020, Spring 2020, Fall 2021
+    \item \textbf{Philly Codefest American Water IoT Prize} - Won ~\$1000 in prizes for the best IoT electronics and coding project
+    \item \textbf{Temple Honors Program} - Selective program for high-achieving students which offers advising and advanced honors level classes
+\end{itemize}
+
+\section{Courses}
+\begin{AutoMultiColItemize}
+  \item Analytical Mechanics
+  \item Optics
+  \item Principles of Electric Circuits
+  \item Introduction to Modern Physics
+  \item Mathematical Physics
+  \item Thermal Physics
+  \item Electricity and Magnetism
+  \item Scientific Computing III (Intro to Machine Learning)
+  \item Classical Mechanics
+  \item Physics 1 \& Physics 2
+  \item Real \& Complex Analysis I
+  \item Basic Concepts (Intro to Proofs)
+  \item Differential Equations with Linear Algebra
+  \item Calculus III (Multivariable and Vector Calculus)
+  \item Computer Systems and Low Level Programming
+  \item Data Structures
+  \item Mathematical Concepts in Computing I (Discrete Mathematics)
+  \end{AutoMultiColItemize}
+
+\end{document}
